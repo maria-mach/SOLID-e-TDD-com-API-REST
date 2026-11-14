@@ -1,7 +1,7 @@
 # Plano de Testes - Pontuação de Boliche
 
 ## Partidas de exemplo
-- [ ] Nenhum pino: 20 jogadas de 0 -> pontuação 0
+- [x] Nenhum pino: 20 jogadas de 0 -> pontuação 0
 - [ ] Um pino por jogada: 20 jogadas de 1 -> pontuação 20
 - [ ] Um spare: 5, 5, 3 e 17 jogadas de 0 -> pontuação 16
 - [ ] Um strike: 10, 3, 4 e 16 jogadas de 0 -> pontuação 24
