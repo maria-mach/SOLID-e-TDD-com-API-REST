@@ -34,4 +34,14 @@ public class JogoTest {
         assertEquals(20, jogo.pontuacao());
         assertTrue(jogo.encerrado());
     }
+
+    @Test
+    void umSpareDeveValer10MaisAProximaJogada() {
+        jogo.jogar(5);
+        jogo.jogar(5);
+        jogo.jogar(3);
+        jogarVarias(17, 0);
+        assertEquals(16, jogo.pontuacao());
+        assertTrue(jogo.encerrado());
+    }
 }
