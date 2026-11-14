@@ -2,7 +2,7 @@
 
 ## Partidas de exemplo
 - [x] Nenhum pino: 20 jogadas de 0 -> pontuação 0
-- [ ] Um pino por jogada: 20 jogadas de 1 -> pontuação 20
+- [x] Um pino por jogada: 20 jogadas de 1 -> pontuação 20
 - [ ] Um spare: 5, 5, 3 e 17 jogadas de 0 -> pontuação 16
 - [ ] Um strike: 10, 3, 4 e 16 jogadas de 0 -> pontuação 24
 - [ ] Spare em todos os frames: 21 jogadas de 5 -> pontuação 150

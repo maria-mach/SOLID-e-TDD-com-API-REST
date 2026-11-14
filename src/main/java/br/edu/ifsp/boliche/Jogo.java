@@ -1,17 +1,22 @@
 package br.edu.ifsp.boliche;
 
 public class Jogo {
-    private int jogadas = 0;
+    private final int[] lancamentos = new int[21];
+    private int jogadaAtual = 0;
 
     public void jogar(int pinos) {
-        jogadas++;
+        lancamentos[jogadaAtual++] = pinos;
     }
 
     public int pontuacao() {
-        return 0;
+        int pontos = 0;
+        for (int i = 0; i < jogadaAtual; i++) {
+            pontos += lancamentos[i];
+        }
+        return pontos;
     }
 
     public boolean encerrado() {
-        return jogadas == 20;
+        return jogadaAtual == 20;
     }
 }
