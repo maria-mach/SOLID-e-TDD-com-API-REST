@@ -96,4 +96,11 @@ public class JogoTest {
         jogo.jogar(7);
         assertThrows(IllegalArgumentException.class, () -> jogo.jogar(4));
     }
+
+    @Test
+    void jogarAposPartidaEncerradaDeveLancarIllegalStateException() {
+        jogarVarias(20, 0);
+        assertTrue(jogo.encerrado());
+        assertThrows(IllegalStateException.class, () -> jogo.jogar(1));
+    }
 }
