@@ -44,4 +44,14 @@ public class JogoTest {
         assertEquals(16, jogo.pontuacao());
         assertTrue(jogo.encerrado());
     }
+
+    @Test
+    void umStrikeDeveValer10MaisAsDuasProximasJogadas() {
+        jogo.jogar(10);
+        jogo.jogar(3);
+        jogo.jogar(4);
+        jogarVarias(16, 0);
+        assertEquals(24, jogo.pontuacao());
+        assertTrue(jogo.encerrado());
+    }
 }
