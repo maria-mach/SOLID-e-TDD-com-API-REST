@@ -12,4 +12,4 @@
 ## Regras de validação
 - [x] V1: Jogada com menos de 0 ou mais de 10 pinos lança `IllegalArgumentException`
 - [x] V2: Nos frames 1 a 9, segunda jogada que faça o frame passar de 10 pinos lança `IllegalArgumentException`
-- [ ] V3: Jogada após o fim da partida (`encerrado() == true`) lança `IllegalStateException`
+- [x] V3: Jogada após o fim da partida (`encerrado() == true`) lança `IllegalStateException`

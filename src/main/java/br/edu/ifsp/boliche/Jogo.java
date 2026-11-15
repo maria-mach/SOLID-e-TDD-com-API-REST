@@ -5,6 +5,9 @@ public class Jogo {
     private int jogadaAtual = 0;
 
     public void jogar(int pinos) {
+        if (encerrado()) {
+            throw new IllegalStateException("Partida ja encerrada");
+        }
         if (pinos < 0 || pinos > 10) {
             throw new IllegalArgumentException("Quantidade de pinos invalida: " + pinos);
         }
