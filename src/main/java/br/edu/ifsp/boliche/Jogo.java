@@ -12,8 +12,8 @@ public class Jogo {
         int pontos = 0;
         int indice = 0;
         for (int frame = 0; frame < 10; frame++) {
-            if (lancamentos[indice] + lancamentos[indice + 1] == 10) {
-                pontos += 10 + lancamentos[indice + 2];
+            if (isSpare(indice)) {
+                pontos += 10 + bonusSpare(indice);
                 indice += 2;
             } else {
                 pontos += lancamentos[indice] + lancamentos[indice + 1];
@@ -21,6 +21,14 @@ public class Jogo {
             }
         }
         return pontos;
+    }
+
+    private boolean isSpare(int indice) {
+        return lancamentos[indice] + lancamentos[indice + 1] == 10;
+    }
+
+    private int bonusSpare(int indice) {
+        return lancamentos[indice + 2];
     }
 
     public boolean encerrado() {
