@@ -10,8 +10,15 @@ public class Jogo {
 
     public int pontuacao() {
         int pontos = 0;
-        for (int i = 0; i < jogadaAtual; i++) {
-            pontos += lancamentos[i];
+        int indice = 0;
+        for (int frame = 0; frame < 10; frame++) {
+            if (lancamentos[indice] + lancamentos[indice + 1] == 10) {
+                pontos += 10 + lancamentos[indice + 2];
+                indice += 2;
+            } else {
+                pontos += lancamentos[indice] + lancamentos[indice + 1];
+                indice += 2;
+            }
         }
         return pontos;
     }
