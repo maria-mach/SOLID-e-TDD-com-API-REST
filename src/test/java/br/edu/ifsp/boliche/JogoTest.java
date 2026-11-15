@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class JogoTest {
@@ -52,6 +53,15 @@ public class JogoTest {
         jogo.jogar(4);
         jogarVarias(16, 0);
         assertEquals(24, jogo.pontuacao());
+        assertTrue(jogo.encerrado());
+    }
+
+    @Test
+    void spareEmTodosOsFramesDevePermitirJogadaExtraESomar150() {
+        jogarVarias(20, 5);
+        assertFalse(jogo.encerrado());
+        jogo.jogar(5);
+        assertEquals(150, jogo.pontuacao());
         assertTrue(jogo.encerrado());
     }
 }
