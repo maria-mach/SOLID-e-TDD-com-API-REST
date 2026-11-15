@@ -8,7 +8,28 @@ public class Jogo {
         if (pinos < 0 || pinos > 10) {
             throw new IllegalArgumentException("Quantidade de pinos invalida: " + pinos);
         }
+        validarLimiteDoFrame(pinos);
         lancamentos[jogadaAtual++] = pinos;
+    }
+
+    private void validarLimiteDoFrame(int pinos) {
+        int indice = 0;
+        for (int frame = 0; frame < 9; frame++) {
+            if (indice == jogadaAtual) {
+                return;
+            }
+            if (isStrike(indice)) {
+                indice += 1;
+            } else {
+                if (indice + 1 == jogadaAtual) {
+                    if (lancamentos[indice] + pinos > 10) {
+                        throw new IllegalArgumentException("Soma do frame ultrapassa 10 pinos");
+                    }
+                    return;
+                }
+                indice += 2;
+            }
+        }
     }
 
     public int pontuacao() {
