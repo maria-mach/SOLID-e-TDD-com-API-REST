@@ -10,6 +10,6 @@
 - [x] Partida mista: 10 · 7, 3 · 9, 0 · 10 · 0, 8 · 8, 2 · 0, 6 · 10 · 10 · 10, 8, 1 -> pontuação 167
 
 ## Regras de validação
-- [ ] V1: Jogada com menos de 0 ou mais de 10 pinos lança `IllegalArgumentException`
+- [x] V1: Jogada com menos de 0 ou mais de 10 pinos lança `IllegalArgumentException`
 - [ ] V2: Nos frames 1 a 9, segunda jogada que faça o frame passar de 10 pinos lança `IllegalArgumentException`
 - [ ] V3: Jogada após o fim da partida (`encerrado() == true`) lança `IllegalStateException`
