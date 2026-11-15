@@ -90,4 +90,10 @@ public class JogoTest {
         assertThrows(IllegalArgumentException.class, () -> jogo.jogar(-1));
         assertThrows(IllegalArgumentException.class, () -> jogo.jogar(11));
     }
+
+    @Test
+    void segundaJogadaQueUltrapassa10PinosNosFrames1A9DeveLancarIllegalArgumentException() {
+        jogo.jogar(7);
+        assertThrows(IllegalArgumentException.class, () -> jogo.jogar(4));
+    }
 }
