@@ -43,6 +43,26 @@ public class Jogo {
     }
 
     public boolean encerrado() {
-        return jogadaAtual >= 19;
+        int indice = 0;
+        for (int frame = 0; frame < 9; frame++) {
+            if (indice >= jogadaAtual) {
+                return false;
+            }
+            if (isStrike(indice)) {
+                indice += 1;
+            } else {
+                if (indice + 1 >= jogadaAtual) {
+                    return false;
+                }
+                indice += 2;
+            }
+        }
+        if (indice + 1 >= jogadaAtual) {
+            return false;
+        }
+        if (isSpare(indice)) {
+            return jogadaAtual >= indice + 3;
+        }
+        return jogadaAtual >= indice + 2;
     }
 }
