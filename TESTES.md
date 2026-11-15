@@ -6,7 +6,7 @@
 - [x] Um spare: 5, 5, 3 e 17 jogadas de 0 -> pontuação 16
 - [x] Um strike: 10, 3, 4 e 16 jogadas de 0 -> pontuação 24
 - [x] Spare em todos os frames: 21 jogadas de 5 -> pontuação 150
-- [ ] Jogo perfeito: 12 jogadas de 10 -> pontuação 300
+- [x] Jogo perfeito: 12 jogadas de 10 -> pontuação 300
 - [ ] Partida mista: 10 · 7, 3 · 9, 0 · 10 · 0, 8 · 8, 2 · 0, 6 · 10 · 10 · 10, 8, 1 -> pontuação 167
 
 ## Regras de validação

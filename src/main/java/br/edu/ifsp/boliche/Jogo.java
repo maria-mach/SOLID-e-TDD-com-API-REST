@@ -60,7 +60,7 @@ public class Jogo {
         if (indice + 1 >= jogadaAtual) {
             return false;
         }
-        if (isSpare(indice)) {
+        if (isStrike(indice) || isSpare(indice)) {
             return jogadaAtual >= indice + 3;
         }
         return jogadaAtual >= indice + 2;
