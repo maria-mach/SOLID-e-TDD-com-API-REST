@@ -13,3 +13,6 @@
 - [x] V1: Jogada com menos de 0 ou mais de 10 pinos lança `IllegalArgumentException`
 - [x] V2: Nos frames 1 a 9, segunda jogada que faça o frame passar de 10 pinos lança `IllegalArgumentException`
 - [x] V3: Jogada após o fim da partida (`encerrado() == true`) lança `IllegalStateException`
+
+## Observações
+- A partida mista (167) passou na primeira execução sem alterar `Jogo.java`; por isso o commit usa o prefixo `test:` em vez de `red:`/`green:`.
